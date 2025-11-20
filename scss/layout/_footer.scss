@@ -1,0 +1,68 @@
+.footer {
+  background-color: var(--primary-dark);
+  position: relative;
+  background-image: url("/img/footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 32px 0;
+  background-size: cover;
+  &::before,
+  &::after {
+    content: "";
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+  &::before {
+    background-image: url(/img/decor-small-bread.png);
+    width: 200px; /*ширину дізнались в інструментах розробника*/
+    height: 150px;
+  }
+
+  &::after {
+    background-image: url(/img/decor-double-bread.png);
+    width: 378px;
+    height: 186px;
+    right: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /*gap for screen size changing*/
+  }
+  /* In the video the footer was made using flex-basis & flex-grow */
+
+  &__nav li {
+    margin-bottom: 16px;
+  }
+  &__address-link {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--primary-light);
+    transition: color 0.3s;
+    margin-bottom: 16px;
+  }
+  &__address-link:hover {
+    color: var(--primary-green);
+  }
+
+  &__socials {
+    fill: var(--primary-light);
+    transition: fill 0.3s;
+  }
+
+  &__socials:hover {
+    fill: var(--primary-green);
+  }
+
+  &__copyright {
+    color: var(--secondary-beige);
+    font-size: 14px;
+  }
+  &__socials-container {
+    display: flex;
+    gap: 22px;
+  }
+}

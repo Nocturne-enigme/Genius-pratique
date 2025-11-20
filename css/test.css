@@ -1,0 +1,141 @@
+.table-content {
+  display: none;
+}
+
+.vid-audio {
+  display: none;
+}
+.parent {
+  border: 3px dotted black;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.item.red {
+  top: 40px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(222, 21, 21);
+  overflow: scroll;
+}
+
+.item.blue {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+}
+.item.green {
+  width: 50px;
+  height: 50px;
+
+  top: 0;
+  background-color: rgb(114, 219, 28);
+}
+
+.red-text {
+  font-size: 19px;
+}
+
+.sticky-exemple {
+  padding-top: 100px;
+  display: none;
+}
+
+.checkup {
+  display: none;
+}
+.heading {
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  background: #f0a4a4;
+}
+
+.heading-two {
+  position: sticky;
+  padding: 20px;
+  top: 0;
+  background: #bbe36c;
+}
+
+p {
+  font-size: 35px;
+}
+
+/* Animations & Transformations */
+
+.anim-parent {
+  display: flex;
+  gap: 50px;
+}
+.anim-kid {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+}
+.green {
+  background-color: #bbe36c;
+  /* transform: rotate(350deg); */
+  margin-left: 45px;
+  margin-top: 45px;
+  transform: translateX(40px);
+  /* animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: linear; */
+  /* animation: spin 3s linear 1s infinite; */
+  transition: transform 1s;
+  opacity: 1;
+}
+
+.green:hover {
+  opacity: 0;
+  background-color: green;
+  animation-play-state: paused;
+  transform: translateX(20px);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    background-color: #bbe36c;
+  }
+  50% {
+    transform: rotate(15deg);
+    background-color: #70bbd9;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: #bbe36c;
+  }
+}
+
+.blue {
+  background-color: #03dcca;
+  transform: translate(50px, 15px);
+  transition: background-color 1s;
+}
+
+.blue:hover {
+  background-color: #70b3ff;
+}
+
+.red {
+  background-color: #d01b1b;
+  transform: scale(2.5);
+  z-index: -3;
+}
+
+.orange {
+  background-color: orange;
+  transform: skew(25deg, 15deg);
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+  resize: none;
+}

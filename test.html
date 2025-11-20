@@ -4,89 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Practice file</title>
+    <link rel="stylesheet" href="/css/test.css" />
   </head>
   <body>
-    <!-- Table exemple -->
-    <table>
-      <caption>
-        Список актуальних зарплат за 2025 рік
-      </caption>
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Full name</th>
-          <th>Position</th>
-          <th>Salary</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark Zukerberg</td>
-          <td>Ceo Facebook</td>
-          <td>120K</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Steeve Jobs</td>
-          <td>Ceo Apple</td>
-          <td>450K</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Maryna Bilobrytska</td>
-          <td>Ceo everything</td>
-          <td>950K</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Lady Gaga</td>
-          <td>Actress.Singer.Talent</td>
-          <td>25M</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>26M</td>
-        </tr>
-      </tfoot>
-    </table>
-    <!-- Table End -->
-
-    <!-- Iframe youtube video exemple -->
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/ZHV_Hc2Wbrw?si=AcqWoJfmFEMwtc3R"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-    <!-- iframe end -->
-
-    <!-- video & Audio tags -->
-    <audio controls>
-      <source src="./test/2 Heads_Coleman Hell.mp3" />
-    </audio>
-    <video controls>
-      <source src="/test/Как нарисовать белку. Урок 2.mp4" />
-    </video>
-    <!-- video end -->
-  </body>
-  =======
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Test Practice file</title>
-    </head>
-    <body>
+    <div class="table-content">
       <!-- Table exemple -->
       <table>
         <caption>
@@ -136,7 +57,8 @@
         </tfoot>
       </table>
       <!-- Table End -->
-
+    </div>
+    <div class="vid-audio">
       <!-- Iframe youtube video exemple -->
       <iframe
         width="560"
@@ -158,20 +80,124 @@
         <source src="/test/Как нарисовать белку. Урок 2.mp4" />
       </video>
       <!-- video end -->
+    </div>
 
-      <!-- Pseudo-selectors Css Below -->
-      <div class="box">
-        <div class="box_kid">1</div>
-        <div class="box_kid">2</div>
-        <div class="box_kid">3</div>
-        <div class="box_kid">4</div>
-        <div class="box_kid">5</div>
+    <!-- Positioning -->
+    <div class="parent">
+      <div class="item red">
+        <p class="red-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, qui
+          voluptatem! Eos voluptatem! voluptatem!
+        </p>
       </div>
+      <div class="item blue"></div>
+      <div class="item green"></div>
+    </div>
 
-      <!-- .box_kid:not(:last-child) {
-          background-color: #465929;
-            } -->
-    </body>
-    >>>>>>> 94c40b120e7c9422db602dfa2e08558b4e86f59a
-  </html>
+    <!-- Sticky Positioning -->
+    <div class="sticky-exemple">
+      <h2 class="heading">I'm Sticking!</h2>
+      <div class="non-sticky-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+      </div>
+    </div>
+    <div class="checkup">
+      <h2 class="heading-two">I'm Sticking!</h2>
+      <div class="non-sticky-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          quibusdam praesentium necessitatibus totam nemo dolor' ex iure
+          officiis laudantium, soluta cupiditate rem amet accusantium iste,
+          eveniet ipsa harum illo? Odio!
+        </p>
+      </div>
+    </div>
+
+    <!-- /* Animations & Transformations*/ -->
+    <div class="anim-parent">
+      <div class="anim-kid green">Translate</div>
+      <div class="anim-kid blue">Rotate</div>
+      <div class="anim-kid red">Scale</div>
+      <div class="anim-kid orange">Skew</div>
+    </div>
+    <form>
+      <fieldset>
+        <legend>Size choice</legend>
+        <select name="size" id="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Comment section</legend>
+        <label for="textarea"
+          >Leave your comment on the topic of seduction</label
+        ><br />
+        <textarea name="textarea" id="textarea" placeholder="Olala"></textarea
+        ><br />
+        <label for="user-email">And your email?</label><br />
+        <input type="email" name="user-email" id="user-email" />
+      </fieldset>
+    </form>
+  </body>
 </html>

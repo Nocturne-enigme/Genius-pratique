@@ -1,0 +1,20 @@
+.chefs-card {
+  display: flex;
+  gap: 30px;
+
+  &__img {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--primary-light),
+      -16px 16px 0 1px var(--secondary-beige);
+    /*The decorative element was creted by making 2 shadows, 
+    one under another to create the same element */
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  &__text:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,9 @@
+@mixin bread-object($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+}
+
+.bread-object {
+  @include bread-object(100px, 100px, rgb(215, 11, 11));
+}

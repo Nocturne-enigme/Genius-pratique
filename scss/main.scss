@@ -1,0 +1,61 @@
+@import "./utils/fonts";
+
+@import "./utils/variables";
+
+/* Base styles */
+@import "./base";
+
+@import "./utils/texts";
+
+@import "./utils/utils";
+
+@import "./utils/mixins";
+
+/* Header */
+
+@import "./layout/header";
+
+/* Navigation */
+@import "./components/links";
+
+/* Button */
+
+@import "./components/buttons";
+
+/* Hero Screen */
+
+@import "./layout/hero-section";
+
+/* Benefits */
+
+@import "./layout/benefits-section";
+
+/* Traditions */
+
+@import "./layout/traditions-section";
+
+// Card
+@import "./components/chefs-card";
+
+/* Our Staff */
+@import "./layout/chefs-section";
+
+/* Options Carousel */
+@import "./components/options-card";
+
+/* Options */
+@import "./layout/options-section";
+
+/* Contacts */
+@import "./layout/_contacts-section";
+
+/* Footer */
+@import "./layout/footer";
+
+/* Modal Window */
+
+@import "./layout/modal-window";
+
+/* Form */
+
+@import "./components/forms";

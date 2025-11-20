@@ -1,0 +1,110 @@
+// .contact-form-input > form-field__input
+// contact-form-label > form-field__label
+
+.form-field {
+  position: relative;
+
+  &__input {
+    font-family: "Poppins";
+    padding: 16px 40px;
+    border-radius: 8px;
+    color: var(--secondary-beige);
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 1px solid var(--secondary-beige);
+    width: 100%;
+    background-color: transparent;
+
+    &:focus {
+      border-color: var(--primary-dark-green);
+      color: var(--primary-dark-green);
+      font-family: "Poppins";
+      font-size: 16px;
+      outline: none; /*to make sure that styles work for the input*/
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: gray;
+      cursor: not-allowed;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 40px;
+    top: 16px;
+    color: var(--secondary-beige);
+    font-size: 16px;
+    transition: transform 0.2s;
+  }
+
+  /* Focus-within element */
+  &:focus-within &__label {
+    transform: translate(-40px, -40px);
+  }
+  /* .contact-form-input:focus + .contact-form-label {
+    transform: translate(-40px, -40px);
+  } */
+
+  &__input:focus + &__label,
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translate(-40px, -40px);
+    color: var(--primary-green);
+
+    /*was made so the label
+    would go down when there's text inside the label*/
+  }
+
+  &__input:focus + &__label,
+  &__input:not(:placeholder-shown) {
+    color: var(--primary-dark-green);
+    border-color: var(--primary-dark-green);
+    /*was made so the label text
+    would become green*/
+  }
+
+  &__input:disabled + &__label {
+    color: gray;
+    cursor: not-allowed;
+  }
+}
+
+// Copyright
+.checkbox-copyright {
+  margin-bottom: 24px;
+
+  &__input {
+    appearance: none;
+  }
+  &__label {
+    font-size: 14px;
+    padding-left: 24px;
+  }
+
+  &__label::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 7px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 3px;
+    pointer-events: none;
+  }
+  &__link {
+    text-decoration: underline;
+    color: var(--primary-dark);
+    text-underline-offset: 2px;
+  }
+
+  &__input:checked + &__label::before {
+    background-color: var(--primary-dark-green);
+    border-color: transparent;
+    background-image: url(/img/form-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
