@@ -6,7 +6,7 @@
 
   &__input {
     font-family: "Poppins";
-    padding: 16px 40px;
+    padding: 8px 24px;
     border-radius: 8px;
     color: var(--secondary-beige);
     font-size: 16px;
@@ -14,6 +14,10 @@
     border: 1px solid var(--secondary-beige);
     width: 100%;
     background-color: transparent;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 40px;
+    }
 
     &:focus {
       border-color: var(--primary-dark-green);
@@ -32,11 +36,17 @@
 
   &__label {
     position: absolute;
-    left: 40px;
-    top: 16px;
+    left: 24px;
+    top: 10px;
     color: var(--secondary-beige);
-    font-size: 16px;
+
     transition: transform 0.2s;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 16px;
+      left: 40px;
+      top: 16px;
+    }
   }
 
   /* Focus-within element */
@@ -89,10 +99,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 7px;
+    margin-top: 3px;
     border: 1px solid var(--primary-dark);
     border-radius: 3px;
     pointer-events: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-top: 7px;
+    }
   }
   &__link {
     text-decoration: underline;

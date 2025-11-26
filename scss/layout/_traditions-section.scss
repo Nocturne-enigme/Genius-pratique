@@ -1,19 +1,33 @@
 .traditions-section {
-  padding-top: 96px 0;
+  padding-top: 0px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 96px;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 30px;
   }
 
   &__content {
     max-width: 620px;
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 42px;
+    }
   }
 
   &__text {
+    font-size: 16px;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+    }
     &--limited {
       max-width: 380px;
     }
@@ -21,5 +35,11 @@
 
   &__image {
     border-radius: 400px 400px 0px 0px;
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      width: 390px;
+    }
   }
 }

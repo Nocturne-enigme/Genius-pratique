@@ -6,6 +6,7 @@
   align-content: flex-end;
   transition: transform 0.3s;
   min-width: 300px; /*to resize normally*/
+  background-size: cover;
 
   &:hover {
     transform: scale(1.05);

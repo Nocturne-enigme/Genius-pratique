@@ -11,6 +11,7 @@
   padding: 16px 32px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 16px;
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
@@ -45,6 +46,12 @@
   flex-shrink: 0;
   fill: var(--primary-dark);
   transition: background-color 0.5s, fill 0.5s;
+  display: none;
+  padding: 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    display: block;
+  }
 
   &:hover {
     background-color: var(--primary-dark);
@@ -60,6 +67,13 @@
   transition: all 0.3s;
   border: 2px solid var(--primary-dark-green);
   display: block;
+  padding: 10px 24px;
+  font-size: 14px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 16px 35px;
+    font-size: 16px;
+  }
 
   &:hover {
     color: var(--primary-dark-green);

@@ -1,10 +1,14 @@
+.swiper {
+  overflow: hidden;
+}
+
 .options-section {
-  &__list {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  // &__list {
+  //   display: flex;
+  //   gap: 20px;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  // }
 
   &__container {
     display: flex;
@@ -13,10 +17,15 @@
   }
 
   &__title {
-    margin-bottom: 80px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 80px;
+    }
   }
 
-  &__item {
-    flex-basis: calc((100% - 40px) / 3);
-  }
+  // &__item {
+  //   flex-basis: calc((100% - 40px) / 3);  Це буде скрито щоб зобразити
+  // через js скільки слайдів буде на контейнері
+  // }
 }

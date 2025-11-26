@@ -12,6 +12,8 @@
     /> -->
     <link rel="icon" href="/img/logo.svg" type="image">
     <link rel="stylesheet" href="/scss/main.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
   </head>
   <body>
     <header class="header">
@@ -36,15 +38,23 @@
           </nav>
           <button class="button header__button modal-btn-open" type="button" >Request a call</button>
           <!-- Кнопка без ссилки?? -->
-           <button class="header__burger" type="button">  
-            <svg width="24" height="24">
-                <use href="/img/icons.svg#menu-icon">
-            </svg>
+           <button class="header__burger menu-btn-open" type="button">  
+              <svg width="24px" height="24px">
+                  <use href="/img/icons.svg#menu-icon">
+              </svg>
           </button>
+          <div class="mobile-menu" >
+            <div class="mobile-menu__nav"> 
+              <a href="/">
+              <img class="mobile-menu__img" src="img/logo.svg" alt="Modern family logo" />
+              </a>
+            <button class="menu-btn-close" type="button"> Close window</button>
+            </div>  
+          </div>
         </div>
       </div>
     </header>
-    <main>
+     <main>
       <section class="hero-section">
         <div class="container">
           <div class="hero-section__block">
@@ -52,10 +62,12 @@
               <span class="hero-section__accent">Modern</span> Bakery
             </h1>
             <h2 class="hero-section__text">Simple. Delicious. Fresh.</h2>
+            <button class="button hero-section__button modal-btn-open" type="button" >Request a call</button>
           </div>
         </div>
       </section>
-      <section class="benefits-section">
+      
+      <section class="benefits-section section">
         <div class="container">
           <ul class="benefits-section__list">
             <li>Great demand on the market</li>
@@ -91,6 +103,7 @@
           </div>
         </div>
       </section>
+      
       <section class="section chefs-section" id="our_staff">
         <div class="container">
           <h2 class="section__title section__title--centered chefs-section__title ">
@@ -101,7 +114,8 @@
               <article class="chefs-card">
                 <img
                   class="chefs-card__img"
-                  src="/img/chef-sophie.jpg"
+                  srcset="img/chef-sophie.jpg 1x, img/chef-sophie@2x.jpg 2x"
+                  src="img/chef-sophie.jpg"
                   alt="Chef Sophie"
                 />
                 <div>
@@ -141,13 +155,14 @@
         <div class="container">
            <h2 class="section__title options-section__title section__title--centered">Options</h2>
           <div class="options-section__container">
-            <button class="carousel-button" type="button">
+             <button class="carousel-button prev" type="button">
              <svg width="16" height="16">
                   <use href="/img/icons.svg#arrow-icon">
               </svg>
              </button>
-            <ul class="options-section__list">
-             <li class="options-section__item">
+          <div class="swiper">
+            <ul class="swiper-wrapper options-section__list ">
+             <li class="swiper-slide options-section__item ">
               <article class="options-card options-card--walrus">
                 <h3 class="options-card__title" lang="en">Walrus</h3>
                 <div class="options-card__text">
@@ -161,7 +176,7 @@
                 </div>
               </article>
             </li>
-            <li class="options-section__item ">
+            <li class="swiper-slide options-section__item">
               <article class="options-card options-card--horseshoe">
                 <h3 class="options-card__title" lang="en">Horseshoe</h3>
                 <div class="options-card__text">
@@ -172,7 +187,43 @@
                 </div>
               </article>
             </li>
-            <li class="options-section__item">
+            <li class="swiper-slide options-section__item ">
+              <article class="options-card options-card--handlebar">
+                <h3 class="options-card__title" lang="en">Handlebar</h3>
+                <div class="options-card__text">
+                  <p>Area: up to 15 m2</p>
+                  <p>Menu: the most popular menu items</p>
+                  <p>Staff: 1 seller, 1 baker, 1 baker's assistant</p>
+                  <p>Seats: none</p>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide options-section__item ">
+              <article class="options-card options-card--walrus">
+                <h3 class="options-card__title" lang="en">Walrus</h3>
+                <div class="options-card__text">
+                  <p>Area: up to 120 m2</p>
+                  <p>Menu: extended menu</p>
+                  <p>
+                    Staff: 2 salespeople-cashiers, 2 bakers, 2 baker's
+                    assistants, 2 waiters-handymen
+                  </p>
+                  <p>Seating: yes</p>
+                </div>
+              </article>
+            </li>
+            <li class="swiper-slide options-section__item  ">
+              <article class="options-card options-card--horseshoe">
+                <h3 class="options-card__title" lang="en">Horseshoe</h3>
+                <div class="options-card__text">
+                  <p>Area: up to 25 m2</p>
+                  <p>Menu: the most popular menu items</p>
+                  <p>Staff: 2 cashiers, 2 bakers, 1 baker's assistant</p>
+                  <p>Seats: none</p>
+                </div>
+              </article>
+            </li>
+            <li class="options-section__item swiper-slide">
               <article class="options-card options-card--handlebar">
                 <h3 class="options-card__title" lang="en">Handlebar</h3>
                 <div class="options-card__text">
@@ -184,12 +235,19 @@
               </article>
             </li>
           </ul>
-          <button class="carousel-button carousel-button--right" type="button">
+          <div class="pagination">
+            <span class="pagination__button"></span>
+            <span class="pagination__button"></span>
+            <span class="pagination__button"></span>
+            <span class="pagination__button"></span>
+          </div>
+        </div>
+         <button class="carousel-button next carousel-button--right " type="button">
              <svg width="16" height="16">
                   <use href="/img/icons.svg#arrow-icon">
               </svg>
           </button>
-          </div>
+           </div>
         </div>
       </section>
       <section class="section contacts-section" id="contacts">
@@ -220,10 +278,8 @@
                   <button class="button form-button" type="submit">Contact our team</button>
                 </form>
               </div>
-              <iframe class="contacts-section__map"
+              <iframe class="contacts-section__map" 
                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d626.8797691209791!2d-114.10125598311424!3d51.06196733215743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f95ab37dd1f%3A0x740b10203b8ff777!2sHounsfield%20Heights%20Park%2C%2017a%20St%20NW%2C%20Calgary%2C%20AB%20T2N%202C9!5e0!3m2!1sen!2sca!4v1761666760090!5m2!1sen!2sca"
-               width="600"
-               height="600"
                style="border: 0"
                allowfullscreen=""
                loading="lazy">
@@ -236,7 +292,7 @@
       <div class="container">
       <div class="footer__container">
            <a href="/">
-            <img src="img/logo.svg" alt="Logo of the modern bakery" />
+            <img class="footer__logo" src="img/logo.svg" alt="Logo of the modern bakery" />
           </a>
           <nav>
           <ul class="footer__nav">
@@ -298,8 +354,9 @@
           <li><p class="copyright">&copy; 2022 All data is reserved</p></li>
         </ul>
       </div>
-      </div>
-    </footer>
+    </footer>   
+   </div>
+   </div>
     <!-- Modal Window styles (Adding at the end so the browser 
      would load the main page first) -->
     <div class="backdrop is-hidden">
@@ -328,7 +385,11 @@
       </div>
     </div>
 <!-- https://www.figma.com/design/fxgvRjiooZOFWtqDNpKBLI/%D0%A1%D1%83%D1%87%D0%B0%D1%81%D0%BD%D1%8F-%D0%BF%D0%B5%D0%BA%D0%B0%D1%80%D0%BD%D1%8F--Copy-?node-id=93-356&t=U7C6OujR1DbJGIG3-0 -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="/js/options-section-slider.js"></script>
   <script src="/js/modal.js"></script>
+  <script src="/js/mobile-menu.js"></script>
   <!-- https://github.com/genius-space/genius-lesson-project -->
   </body>
 </html>
